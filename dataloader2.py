@@ -190,8 +190,7 @@ class BufferedProcessor(object):
                 break
 
             if isinstance(v, ExceptionMarker):
-                raise Ru
-            ntimeError(v.get_traceback())
+                raise RuntimeError(v.get_traceback())
             else:
                 #print 'roz', buffer.qsize()
                 yield v
